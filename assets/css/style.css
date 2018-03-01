@@ -1,7 +1,71 @@
 
+body {
+	background-color: #387D84;
+	background-image: url("../images/cheeses.png");
+	background-position: 70% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+h1 {
+	font-size: 320%;
+	color: black;
+	font-family: 'Niconne', cursive;
+	margin: 50px;
+	padding: 15px;
+	background-color: lightgray;
+	border: 2px solid darkgray;
+}
+
+.btn {
+	margin: 20px;
+	font-family: 'Niconne', cursive;
+	font-size: 200%;
+	float: right;
+
+}
+
+p {
+	padding: 15px;
+	background-color: #f8f9fA;
+	color: black;
+	text-align: center;
+}
+
+.questions {
+	margin: 80px 0 40px 0;
+	font-family: 'Niconne', cursive;
+	font-weight: bold;
+	font-size: 200%;
+	clear: both;
+	opacity: .9;
+	/*background-color: #fff;*/
+}
+
+.correctyay {
+	background-color: green;
+}
 
 
+.answers {
+	width: 50%;
+	clear: both;
+	opacity: .9;
+	/*background-color: #fff;*/
+}
 
 @media (max-width: 767.98px) {
-	
+	h1 {
+		font-size: 240%;
+	}
+	.answers {
+		width: 80%;
+	}
+	body {
+	background-image: url("../images/cheeses.png");
+	background-position: 70% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: contain;
+	}
 }

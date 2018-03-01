@@ -10,3 +10,14 @@
 	- buttons for answers? .class added to each correct answer, useful for detecting correct answer click & displaying correct .class when ans is wrong?
 */
 
+
+$(".one, .two, .three, .four, .five, .six, .seven, .eight").hide();
+$(".answers, .questions").hide();
+$("#start").show();
+
+$("#start").on("click", function() {
+	$("#start").hide();
+	$("h1").hide();
+	$(".questions, .answers, .one").show();
+
+});
