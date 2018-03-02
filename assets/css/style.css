@@ -1,6 +1,6 @@
 
 body {
-	background-color: #387D84;
+	background-color: #f6efef;
 	background-image: url("../images/cheeses.png");
 	background-position: 70% 100%;
 	background-repeat: no-repeat;
@@ -13,8 +13,8 @@ h1 {
 	font-family: 'Niconne', cursive;
 	margin: 50px;
 	padding: 15px;
-	background-color: lightgray;
-	border: 2px solid darkgray;
+	background-color: #f8f9fA;
+	border: 1px solid darkgray;
 }
 
 .btn {
@@ -22,6 +22,7 @@ h1 {
 	font-family: 'Niconne', cursive;
 	font-size: 200%;
 	float: right;
+	background-color: #f8f9fA;
 
 }
 
@@ -46,7 +47,7 @@ p {
 	font-family: 'Niconne', cursive;
 	font-weight: bold;
 	font-size: 200%;
-	clear: both;
+/*	clear: both; */
 	opacity: .9;
 	/*background-color: #fff;*/
 }
@@ -61,8 +62,8 @@ p {
 
 
 .answers {
-	width: 50%;
-	clear: both;
+	width: 100%;
+/*	clear: both; */
 	opacity: .9;
 	/*background-color: #fff;*/
 }

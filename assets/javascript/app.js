@@ -4,9 +4,11 @@ $(document).ready(function() {
 	var correctGuesses = 0;
 	var wrongGuesses = 0;
 	var totalAnswered = 0;
+	var counter = 15;
+	var timer;
 
 	$(".one, .two, .three, .four, .five, .six, .seven, .eight").hide();
-	$(".answers, .questions").hide();
+	$(".answers, .questions, #counter").hide();
 	$("#start").show();
 
 
@@ -15,23 +17,35 @@ $("#start").on("click", function() {
 	$("#start").hide();
 	$("h1").hide();
 	$(".questions, .answers, .one").show();
-	var timer = setTimeout(showAnswer, 1000 * 15);
+	$("#counter").text(counter);
+	timer = setInterval(countdown, 1000);
 });
+
+function countdown(timer) {
+	counter--;
+	$("#counter").text(counter);
+	if (counter === 0) {
+		clearInterval(timer);
+		showAnswer();
+	}
+}
 
 // clicking on wrong answer turns all wrongs red and shows correct in green
 $(".wrong").on("click", function(timer) {
-	clearTimeout(timer);
+	clearInterval(timer);
+	counter = 15;
 	$(".wrong").addClass("wrongboo");
 	$(".correct").addClass("correctyay");
 	wrongGuesses++;
 	totalAnswered++;
 	$(".wrong").fadeOut();
-	setTimeout(next, 1000 * 1);
+	setTimeout(next, 1000 * 2);
 });
 
 // clicking on correct answer turns it green
 $(".correct").on("click", function(timer) {
-	clearTimeout(timer);
+	clearInterval(timer);
+	counter = 15;
 	$(".correct").addClass("correctyay");
 	correctGuesses++;
 	totalAnswered++;
@@ -41,17 +55,18 @@ $(".correct").on("click", function(timer) {
 
 // showing correct answer in green if question is not answered in time
 function showAnswer(timer) {
-	clearTimeout(timer);
+	clearInterval(timer);
+	counter = 15;
 	$(".correct").addClass("correctyay");
-	$(".wrong").hide();
+	$(".wrong").fadeOut();
 	totalAnswered++;
-	setTimeout(next, 1000 * 1);
+	setTimeout(next, 1000 * 2);
 }
 
 // on to the next question
 function next(timer) {
-	clearTimeout(timer);
-//	$(".questions", ".answers").hide();
+	clearInterval(timer);
+	counter = 15;
 	$(".answers").removeClass("wrongboo");
 	$(".answers").removeClass("correctyay");
 	console.log(triviaItems[totalAnswered]);
@@ -61,9 +76,11 @@ function next(timer) {
 	$(currentQuestion).removeClass("wrongboo correctyay");
 	$(currentQuestion).show();
 	if (triviaItems[totalAnswered] === "end") {
-	$(".end-screen").addClass("end");
-	$(".end-screen").append("You got " + correctGuesses + " of them right, and " + wrongGuesses + " of them wrong!");
-}
+		clearInterval(timer);
+		$("#counter").hide();
+		$(".end-screen").addClass("end");
+		$(".end-screen").append("You got " + correctGuesses + " of them right, and " + wrongGuesses + " of them wrong!");
+	}
 }
 
 
