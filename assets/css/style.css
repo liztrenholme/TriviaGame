@@ -32,6 +32,15 @@ p {
 	text-align: center;
 }
 
+.end {
+	padding: 15px;
+	background-color: #f8f9fA;
+	color: black;
+	font-family: 'Niconne', cursive;
+	font-size: 300%;
+	text-align: center;
+}
+
 .questions {
 	margin: 80px 0 40px 0;
 	font-family: 'Niconne', cursive;
