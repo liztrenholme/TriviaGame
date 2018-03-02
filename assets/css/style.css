@@ -35,9 +35,9 @@ p {
 }
 
 #countdown {
+	margin: 60px 10px 30px 0;
 	float: right;
 	width: 50px;
-	margin: 10px;
 	padding: 10px;
 	font-size: 200%;
 	background-color: #f8f9fA;
@@ -53,6 +53,7 @@ p {
 	font-family: 'Niconne', cursive;
 	font-size: 300%;
 	text-align: center;
+	opacity: .9;
 }
 
 .questions {
@@ -79,18 +80,41 @@ p {
 	opacity: .9;
 }
 
-@media (max-width: 767.98px) {
-	h1 {
-		font-size: 240%;
-	}
-	.answers {
-		width: 80%;
-	}
+/* Optimization for mobile devices */
+@media (max-width: 992px) {
 	body {
 	background-image: url("../images/cheeses.png");
 	background-position: 70% 100%;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: contain;
+	}
+}
+
+@media (max-width: 992px) {
+	h1 {
+		font-size: 240%;
+	}
+}
+
+@media (max-width: 992px) {
+	.questions {
+	width: 70%;
+	margin: 20px 0 0 0;
+	font-family: 'Niconne', cursive;
+	font-weight: bold;
+	font-size: 250%;
+	opacity: .9;
+	}
+}
+@media (max-width: 992px) {
+	#countdown {
+	margin: 2px;
+	}
+}
+
+@media (max-width: 992px) {
+	.answers {
+		width: 100%;
 	}
 }
