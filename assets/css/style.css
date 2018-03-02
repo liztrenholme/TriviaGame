@@ -61,7 +61,6 @@ p {
 	margin: 60px 0 30px 0;
 	border-radius: 5px;
 	font-family: 'Niconne', cursive;
-	font-weight: bold;
 	font-size: 200%;
 	opacity: .9;
 }
@@ -83,11 +82,11 @@ p {
 /* Optimization for mobile devices */
 @media (max-width: 992px) {
 	body {
-	background-image: url("../images/cheeses.png");
-	background-position: 70% 100%;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: contain;
+		background-image: url("../images/cheeses.png");
+		background-position: 70% 100%;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: contain;
 	}
 }
 
@@ -99,17 +98,15 @@ p {
 
 @media (max-width: 992px) {
 	.questions {
-	width: 70%;
-	margin: 20px 0 0 0;
-	font-family: 'Niconne', cursive;
-	font-weight: bold;
-	font-size: 250%;
-	opacity: .9;
+		margin: 20px 0 0 0;
+		font-family: 'Niconne', cursive;
+		font-size: 200%;
+		opacity: .9;
 	}
 }
 @media (max-width: 992px) {
 	#countdown {
-	margin: 2px;
+		margin: 2px;
 	}
 }
 

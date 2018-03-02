@@ -7,6 +7,7 @@ $(document).ready(function() {
 	var counter = 15;
 	var timer;
 
+// setting up the page to begin
 	$(".one, .two, .three, .four, .five, .six, .seven, .eight").hide();
 	$(".answers, .questions, #countdown").hide();
 	$("#start").show();
@@ -21,6 +22,7 @@ $("#start").on("click", function() {
 	timer = setInterval(countdown, 1000);
 });
 
+// timer tha counts down 15 seconds for each question
 function countdown(timer) {
 	counter--;
 	$("#countdown").text(counter);
