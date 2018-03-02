@@ -8,7 +8,7 @@ $(document).ready(function() {
 	var timer;
 
 	$(".one, .two, .three, .four, .five, .six, .seven, .eight").hide();
-	$(".answers, .questions, #counter").hide();
+	$(".answers, .questions, #countdown").hide();
 	$("#start").show();
 
 
@@ -16,14 +16,14 @@ $(document).ready(function() {
 $("#start").on("click", function() {
 	$("#start").hide();
 	$("h1").hide();
-	$(".questions, .answers, .one").show();
-	$("#counter").text(counter);
+	$(".questions, .answers, .one, #countdown").show();
+	$("#countdown").text(counter);
 	timer = setInterval(countdown, 1000);
 });
 
 function countdown(timer) {
 	counter--;
-	$("#counter").text(counter);
+	$("#countdown").text(counter);
 	if (counter === 0) {
 		clearInterval(timer);
 		showAnswer();
@@ -33,7 +33,7 @@ function countdown(timer) {
 // clicking on wrong answer turns all wrongs red and shows correct in green
 $(".wrong").on("click", function(timer) {
 	clearInterval(timer);
-	counter = 15;
+	counter = 16;
 	$(".wrong").addClass("wrongboo");
 	$(".correct").addClass("correctyay");
 	wrongGuesses++;
@@ -45,7 +45,7 @@ $(".wrong").on("click", function(timer) {
 // clicking on correct answer turns it green
 $(".correct").on("click", function(timer) {
 	clearInterval(timer);
-	counter = 15;
+	counter = 16;
 	$(".correct").addClass("correctyay");
 	correctGuesses++;
 	totalAnswered++;
@@ -56,7 +56,7 @@ $(".correct").on("click", function(timer) {
 // showing correct answer in green if question is not answered in time
 function showAnswer(timer) {
 	clearInterval(timer);
-	counter = 15;
+	counter = 16;
 	$(".correct").addClass("correctyay");
 	$(".wrong").fadeOut();
 	totalAnswered++;
@@ -66,7 +66,7 @@ function showAnswer(timer) {
 // on to the next question
 function next(timer) {
 	clearInterval(timer);
-	counter = 15;
+	counter = 16;
 	$(".answers").removeClass("wrongboo");
 	$(".answers").removeClass("correctyay");
 	console.log(triviaItems[totalAnswered]);
@@ -77,7 +77,7 @@ function next(timer) {
 	$(currentQuestion).show();
 	if (triviaItems[totalAnswered] === "end") {
 		clearInterval(timer);
-		$("#counter").hide();
+		$("#countdown").hide();
 		$(".end-screen").addClass("end");
 		$(".end-screen").append("You got " + correctGuesses + " of them right, and " + wrongGuesses + " of them wrong!");
 	}
