@@ -43,13 +43,11 @@ p {
 }
 
 .questions {
-	margin: 80px 0 40px 0;
+	margin: 60px 0 30px 0;
 	font-family: 'Niconne', cursive;
 	font-weight: bold;
 	font-size: 200%;
-/*	clear: both; */
 	opacity: .9;
-	/*background-color: #fff;*/
 }
 
 .correctyay {
@@ -63,9 +61,7 @@ p {
 
 .answers {
 	width: 100%;
-/*	clear: both; */
 	opacity: .9;
-	/*background-color: #fff;*/
 }
 
 @media (max-width: 767.98px) {
