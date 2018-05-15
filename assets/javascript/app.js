@@ -6,10 +6,11 @@ $(document).ready(function() {
 	var totalAnswered = 0;
 	var counter = 15;
 	var timer;
+	var answeredQuestions = [];
 
 // setting up the page to begin
 	$(".one, .two, .three, .four, .five, .six, .seven, .eight").hide();
-	$(".answers, .questions, #countdown").hide();
+	$(".answers, .questions, #countdown, #reset").hide();
 	$("#start").show();
 
 
@@ -74,16 +75,33 @@ function next(timer) {
 	console.log(triviaItems[totalAnswered]);
 	var currentQuestion = document.getElementsByClassName(triviaItems[totalAnswered]);
 	var previousQuestion = document.getElementsByClassName(triviaItems[totalAnswered - 1]);
-	$(previousQuestion).remove();
+	answeredQuestions.push(previousQuestion);
+	$holder = $(previousQuestion).detach();
+
 	$(currentQuestion).removeClass("wrongboo correctyay");
 	$(currentQuestion).show();
 	if (triviaItems[totalAnswered] === "end") {
 		clearInterval(timer);
+		timer = 0;
 		$("#countdown").hide();
 		$(".end-screen").addClass("end");
 		$(".end-screen").append("You got " + correctGuesses + " of them right, and " + wrongGuesses + " of them wrong!");
+		$("#reset").show();
 	}
 }
 
+$("#reset").on("click", function(timer) {
+	clearInterval(timer);
+	$(".end-screen, #reset").hide();
+	$(".questions, .answers, .one, #countdown").append($holder);
+	$(".questions, .answers, .one, #countdown").show();
+	$("#countdown").text(counter);
+	totalAnswered = 0;
+	setTimeout(next, 1000);
+})
+
+/*$("#reset").on("click", function(timer) {
+	location.reload(true)
+});*/
 
 });
