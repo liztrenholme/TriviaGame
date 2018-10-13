@@ -39,6 +39,7 @@ $(".wrong").on("click", function(timer) {
 	counter = 16;
 	$(".wrong").addClass("wrongboo");
 	$(".correct").addClass("correctyay");
+	$(".wrong, .correct").removeClass("hover");
 	wrongGuesses++;
 	totalAnswered++;
 	$(".wrong").fadeOut();
@@ -50,6 +51,7 @@ $(".correct").on("click", function(timer) {
 	clearInterval(timer);
 	counter = 16;
 	$(".correct").addClass("correctyay");
+	$(".wrong, .correct").removeClass("hover");
 	correctGuesses++;
 	totalAnswered++;
 	$(".wrong").fadeOut();
@@ -61,6 +63,7 @@ function showAnswer(timer) {
 	clearInterval(timer);
 	counter = 16;
 	$(".correct").addClass("correctyay");
+	$(".wrong, .correct").removeClass("hover");
 	$(".wrong").fadeOut();
 	totalAnswered++;
 	setTimeout(next, 1000 * 2);
@@ -72,6 +75,7 @@ function next(timer) {
 	counter = 16;
 	$(".answers").removeClass("wrongboo");
 	$(".answers").removeClass("correctyay");
+	$(".correct, .wrong").addClass("hover");
 	console.log(triviaItems[totalAnswered]);
 	var currentQuestion = document.getElementsByClassName(triviaItems[totalAnswered]);
 	var previousQuestion = document.getElementsByClassName(triviaItems[totalAnswered - 1]);
