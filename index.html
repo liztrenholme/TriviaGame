@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	 crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Niconne" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<title>Cheese Quiz!</title>
 </head>
+
 <body>
 	<div class="container">
 		<div class="row">
@@ -17,186 +20,193 @@
 		</div>
 		<div class="row">
 			<div class="col-md-8">
-				<button type="button" class="btn btn-light btn-lg" id="start"><p class=btn>Start!</p></button>
-				<button type="button" class="btn btn-light btn-lg" id="reset"><p class=btn>Start over!</p></button>
+				<button type="button" class="btn btn-light btn-lg" id="start">
+					<p class=btn>Start!</p>
+				</button>
+				<button type="button" class="btn btn-light btn-lg" id="reset">
+					<p class=btn>Start over!</p>
+				</button>
 			</div>
-			<div class="row">
-				<div class="col-md-9 questions">
-					<p class="one">What cheese was named after the waterline of a particular lake?</p>
-					<p class="two">What gives some cheeses their distinct yellow appearance?</p>
-					<p class="three">Can lactose intolerant people eat cheese?</p>
-					<p class="four">What type of milk is roquefort traditionally made from?</p>
-					<p class="five">What makes meadowkaas unique when compared to other cheeses?</p>
-					<p class="six">Where did cheddar cheese originate?</p>
-					<p class="seven">Of the groups of cheeses listed, which are considered alpine?</p>
-					<p class="eight">Parmeggiano reggiano is aged for a minimum of how many months?</p>
-				</div>
+			<div class="col-md-4"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-9 questions">
+				<p class="one">What cheese was named after the waterline of a particular lake?</p>
+				<p class="two">What gives some cheeses their distinct yellow appearance?</p>
+				<p class="three">Can lactose intolerant people eat cheese?</p>
+				<p class="four">What type of milk is roquefort traditionally made from?</p>
+				<p class="five">What makes meadowkaas unique when compared to other cheeses?</p>
+				<p class="six">Where did cheddar cheese originate?</p>
+				<p class="seven">Of the groups of cheeses listed, which are considered alpine?</p>
+				<p class="eight">Parmeggiano reggiano is aged for a minimum of how many months?</p>
 			</div>
 			<div class="col-md-3">
 				<p id="countdown"></p>
 			</div>
-			<div class="row">
-				<div class="col-md-12 end-screen">
-					<br>
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="one wrong">Erie Mountain</p>
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="one wrong">Meadowkaas</p> 
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="one correct">Humboldt Fog</p> 
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="one wrong">Tronchon</p>
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="two correct">Annatto</p> 
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="two wrong">Lemon juice</p> 
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="two wrong">Casein</p> 
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="two wrong">Milk</p>
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="three wrong">Definitely not</p> 
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="three correct">Certain kinds</p> 
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="three wrong">Of course!</p>
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="four wrong">Cow</p> 
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="four correct">Sheep</p> 
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="four wrong">Goat</p> 
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="four wrong">Buffalo</p>
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="five wrong">It's made from cow, goat and sheep's milk.</p>
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="five wrong">It's a rare Appalachian cheese.</p> 
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="five wrong">It's only found in the Netherlands.</p> 
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="five correct">It's made from the milk taken after a cow eats the first spring grass.</p>
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="six correct">Cheddar Village, Somerset, England</p> 
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="six wrong">Orkney Islands, Scotland</p> 
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="six wrong">New Zealand</p> 
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="six wrong">Hamburg, Germany</p>
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="seven wrong">Cheddar, butter cheese, cabot</p> 
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="seven wrong">Pecorino, reggiano, asiago</p> 
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="seven correct">Gruyere, Emmental, Jarlsberg</p> 
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="seven wrong">Triple cream brie, camembert, Red Hawk</p>
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="eight wrong">2 months</p>
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="eight correct">24 months</p> 
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="eight wrong">15 months</p> 
-				</div>
-			</div>
-			<div class="row answers">
-				<div class="col-md-12 answers">
-					<p class="eight wrong">6 months</p>
-				</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 end-screen">
+				<br>
 			</div>
 		</div>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="assets/javascript/app.js"></script>
-	</body>
-	</html>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="one wrong">Erie Mountain</p>
+			</div>
+		</div>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="one wrong">Meadowkaas</p>
+			</div>
+		</div>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="one correct">Humboldt Fog</p>
+			</div>
+		</div>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="one wrong">Tronchon</p>
+			</div>
+		</div>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="two correct">Annatto</p>
+			</div>
+		</div>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="two wrong">Lemon juice</p>
+			</div>
+		</div>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="two wrong">Casein</p>
+			</div>
+		</div>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="two wrong">Milk</p>
+			</div>
+		</div>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="three wrong">Definitely not</p>
+			</div>
+		</div>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="three correct">Certain kinds</p>
+			</div>
+		</div>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="three wrong">Of course!</p>
+			</div>
+		</div>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="four wrong">Cow</p>
+			</div>
+		</div>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="four correct">Sheep</p>
+			</div>
+		</div>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="four wrong">Goat</p>
+			</div>
+		</div>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="four wrong">Buffalo</p>
+			</div>
+		</div>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="five wrong">It's made from cow, goat and sheep's milk.</p>
+			</div>
+		</div>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="five wrong">It's a rare Appalachian cheese.</p>
+			</div>
+		</div>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="five wrong">It's only found in the Netherlands.</p>
+			</div>
+		</div>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="five correct">It's made from the milk taken after a cow eats the first spring grass.</p>
+			</div>
+		</div>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="six correct">Cheddar Village, Somerset, England</p>
+			</div>
+		</div>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="six wrong">Orkney Islands, Scotland</p>
+			</div>
+		</div>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="six wrong">New Zealand</p>
+			</div>
+		</div>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="six wrong">Hamburg, Germany</p>
+			</div>
+		</div>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="seven wrong">Cheddar, butter cheese, cabot</p>
+			</div>
+		</div>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="seven wrong">Pecorino, reggiano, asiago</p>
+			</div>
+		</div>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="seven correct">Gruyere, Emmental, Jarlsberg</p>
+			</div>
+		</div>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="seven wrong">Triple cream brie, camembert, Red Hawk</p>
+			</div>
+		</div>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="eight wrong">2 months</p>
+			</div>
+		</div>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="eight correct">24 months</p>
+			</div>
+		</div>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="eight wrong">15 months</p>
+			</div>
+		</div>
+		<div class="row answers">
+			<div class="col-md-12 answers">
+				<p class="eight wrong">6 months</p>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="assets/javascript/app.js"></script>
+</body>
+
+</html>
