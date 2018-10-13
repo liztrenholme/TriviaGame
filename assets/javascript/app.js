@@ -5,7 +5,7 @@ $(document).ready(function() {
 	var wrongGuesses = 0;
 	var totalAnswered = 0;
 	var counter = 15;
-	var timer;
+	// var timer;
 	var answeredQuestions = [];
 
 // setting up the page to begin
@@ -90,18 +90,12 @@ function next(timer) {
 	}
 }
 
-$("#reset").on("click", function(timer) {
-	clearInterval(timer);
-	$(".end-screen, #reset").hide();
-	$(".questions, .answers, .one, #countdown").append($holder);
-	$(".questions, .answers, .one, #countdown").show();
-	$("#countdown").text(counter);
-	totalAnswered = 0;
-	setTimeout(next, 1000);
-})
+// $("#reset").on("click", function(timer) {
+// 	clearInterval(timer);
+// })
 
-/*$("#reset").on("click", function(timer) {
+$("#reset").on("click", function(timer) {
 	location.reload(true)
-});*/
+});
 
 });
